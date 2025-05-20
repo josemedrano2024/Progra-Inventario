@@ -66,6 +66,11 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('products.index') }}">
+                                   <i class="fas fa-boxes"></i> Productos
+                                </a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
