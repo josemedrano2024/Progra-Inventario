@@ -61,35 +61,33 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
-   public function update(Request $request, Product $product)
-{
-    $validated = $request->validate([
-        'code' => 'required|max:50|unique:products,code,'.$product->id,
-        'name' => 'required|max:100',
-        'description' => 'nullable',
-        'price' => 'required|numeric|min:0',
-        'quantity' => 'required|integer|min:0',
-        'category' => 'required|max:50',
-        'supplier' => 'nullable|max:100',
-        'expiration_date' => 'nullable|date',
-        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-    ]);
+    public function update(Request $request, Product $product)
+    {
+        $validated = $request->validate([
+            'code' => 'required|max:50|unique:products,code,'.$product->id,
+            'name' => 'required|max:100',
+            'description' => 'nullable',
+            'price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:0',
+            'category' => 'required|max:50',
+            'supplier' => 'nullable|max:100',
+            'expiration_date' => 'nullable|date',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
-    // Manejo de la imagen
-    if ($request->hasFile('image')) {
-        // Eliminar imagen anterior si existe
-        if ($product->image) {
-            Storage::disk('public')->delete($product->image);
+        if ($request->hasFile('image')) {
+            // Eliminar imagen anterior si existe
+            if ($product->image) {
+                Storage::disk('public')->delete($product->image);
+            }
+            $validated['image'] = $request->file('image')->store('products', 'public');
         }
-        $validated['image'] = $request->file('image')->store('products', 'public');
+
+        $product->update($validated);
+
+        return redirect()->route('products.index')
+            ->with('success', 'Producto actualizado exitosamente.');
     }
-
-    // Actualizar el producto
-    $product->update($validated);
-
-    return redirect()->route('products.index')
-        ->with('success', 'Producto actualizado exitosamente.');
-}
 
     public function destroy(Product $product)
     {
@@ -101,7 +99,6 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')
-        ->with('success', 'Producto actualizado correctamente');
-       
+            ->with('success', 'Producto eliminado exitosamente.');
     }
 }
