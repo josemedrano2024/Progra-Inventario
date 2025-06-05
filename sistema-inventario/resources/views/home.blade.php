@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Sistema de Inventario') }}</div>
-
-                <div class="card-body">
-                    <h1>Bienvenido al Sistema de Inventario</h1>
-                    <p>Este es un sistema para gestionar inventarios de manera eficiente.</p>
-                    <p>Por favor, inicie sesión o regístrese para continuar.</p>
-                </div>
-            </div>
+<div class="home-container">
+    <div class="home-card">
+        <div class="home-header">
+            <h1 class="home-title">Sistema de Inventario</h1>
+            <h2 class="home-subtitle">Bienvenido</h2>
+        </div>
+        
+        <div class="home-body">
+            <p class="home-text">Este es un sistema para gestionar inventarios de manera eficiente.</p>
+            <p class="home-text">Por favor, inicie sesión o regístrese para continuar.</p>
+        
         </div>
     </div>
+</div>
 @endsection
