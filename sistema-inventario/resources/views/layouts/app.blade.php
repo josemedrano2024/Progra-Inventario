@@ -39,7 +39,7 @@
             color: #a5b4fc !important;
         }
         .dropdown-menu {
-            background: #6366f1;
+            background:rgba(99, 101, 241, 0.35);
         }
         .dropdown-item {
             border-radius: 4px;
