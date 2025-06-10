@@ -98,3 +98,72 @@
 @endsection
 </body>
 </html>
+  <style>
+        body {
+            background: #f8fafc;
+        }
+        .card {
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            border: none;
+        }
+        .card-header {
+            background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        .btn-primary {
+            background: #007bff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            margin-left: 10px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .img-thumbnail {
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+        }
+        label {
+            font-weight: 500;
+            color: #0056b3;
+        }
+        .form-control:focus, .form-control-file:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control, .form-control-file {
+            border-radius: 8px;
+        }
+        .invalid-feedback {
+            font-size: 0.95em;
+        }
+        .container {
+            padding-bottom: 40px;
+        }
+        @media (max-width: 576px) {
+            .card {
+                margin-top: 20px;
+            }
+            .card-header {
+                font-size: 1.1rem;
+            }
+        }
+    </style>

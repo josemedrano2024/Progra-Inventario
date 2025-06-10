@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8fafc;
+        }
+        .card {
+            margin-top: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+        .card-header {
+            background: #007bff;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .form-group label {
+            font-weight: 500;
+        }
+        .btn-primary {
+            background: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            margin-left: 10px;
+        }
+        .form-control:focus, .form-control-file:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+    </style>
 </head>
 <body>
     @extends('layouts.app')
@@ -162,5 +199,8 @@
     </div>
 </div>
 @endsection
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
