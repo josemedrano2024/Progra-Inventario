@@ -36,10 +36,10 @@
             transition: color 0.3s;
         }
         .nav-link:hover, .dropdown-item:hover {
-            color: #a5b4fc !important;
+            color:rgb(165, 180, 252) !important;
         }
         .dropdown-menu {
-            background:rgba(99, 101, 241, 0.35);
+            background:rgb(99, 101, 241);
         }
         .dropdown-item {
             border-radius: 4px;
