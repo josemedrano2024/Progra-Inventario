@@ -18,3 +18,4 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
     // Rutas solo para administradores
     Route::get('/admin/dashboard', 'AdminController@dashboard');
 });
+
