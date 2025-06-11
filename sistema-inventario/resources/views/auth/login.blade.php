@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="auth-container">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="auth-card">
         <div class="auth-header">
             <h2 class="auth-title">Iniciar Sesión</h2>
@@ -53,5 +53,3 @@
     </div>
 </div>
 @endsection
-
-
