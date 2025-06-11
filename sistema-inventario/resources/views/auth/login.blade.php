@@ -37,11 +37,7 @@
                     <label class="form-check-label" for="remember">Recordarme</label>
                 </div>
                 
-                @if (Route::has('password.request'))
-                    <a class="forgot-password" href="{{ route('password.request') }}">
-                        ¿Olvidaste tu contraseña?
-                    </a>
-                @endif
+                    
             </div>
 
             <div class="form-actions">

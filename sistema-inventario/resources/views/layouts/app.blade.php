@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Inventario') }}</title>
+    <title>INVENTARIO</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -59,6 +59,49 @@
             from { opacity: 0;}
             to { opacity: 1;}
         }
+        /* Estilos para los botones de Login, Registro y Productos */
+        .nav-link[href*="login"],
+        .nav-link[href*="register"],
+        .nav-link[href*="products"] {
+            background: #6366f1;
+            color: #fff !important;
+            border-radius: 20px;
+            padding: 6px 18px;
+            margin-left: 8px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            animation: btnFadeIn 0.8s;
+        }
+        .nav-link[href*="login"]:hover,
+        .nav-link[href*="register"]:hover,
+        .nav-link[href*="products"]:hover {
+            background: #818cf8;
+            color: #e0e7ff !important;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.15);
+        }
+        @keyframes btnFadeIn {
+            from { opacity: 0; transform: translateY(-10px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        /* Estilo para el botón del nombre de usuario */
+        #navbarDropdown.nav-link.dropdown-toggle {
+            background: #6366f1;
+            color: #fff !important;
+            border-radius: 20px;
+            padding: 6px 18px;
+            margin-left: 8px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            animation: btnFadeIn 0.8s;
+        }
+        #navbarDropdown.nav-link.dropdown-toggle:hover,
+        #navbarDropdown.nav-link.dropdown-toggle:focus {
+            background: #818cf8;
+            color: #e0e7ff !important;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.15);
+        }
     </style>
 </head>
 <body>
@@ -85,13 +128,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Inicio de seccion') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                 </li>
                             @endif
                         @else

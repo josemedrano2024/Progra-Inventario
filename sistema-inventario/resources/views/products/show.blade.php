@@ -11,13 +11,14 @@
     <style>
         body {
             background: #f8fafc;
-        }
+
         .card {
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             border-radius: 12px;
         }
         .card-header {
             background: #007bff;
+
             color: #fff;
             font-size: 1.2rem;
             border-top-left-radius: 12px;
