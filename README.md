@@ -1,4 +1,6 @@
-Carlos Romero
-Jose Medrano
-Andrea Patricia
+Carlos Romero,
+Jose Medrano,
+Andrea Patricia,
 Fabiola Benitez
+
+Gestor utilizado:XAMP
